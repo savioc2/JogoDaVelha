@@ -32,8 +32,10 @@ public class Main{
 		
 		System.out.print("Insira o nome do jogador 1: "); 
 		String play1 = s.nextLine(); 
+		System.out.println("Simbolo para jogador 1 - 'X' ");
 		System.out.print("Insira o nome do jogador 2: "); 
 		String play2 = s.nextLine(); 
+		System.out.println("Simbolo para jogador 1 - 'O' ");
 		
 		boolean loop =true;
 		while(loop) {
@@ -55,6 +57,7 @@ public class Main{
 				case 1:
 				if (("O".equals(matriz[3][1])) || ("X".equals(matriz[3][1]))) {
 					System.out.println("Quadrante repetido, perdeu a vez"); 
+					}else{
 					matriz[3][1]="X";
 					break;
 				}
@@ -240,7 +243,7 @@ public class Main{
 			}
 			
 			
-			if (indice < 5 && indice > 5) {
+			if (indice != 5) {
 				System.out.println();
 				System.out.println("      +---+---+---+");
 				System.out.println("      | " + matriz[1][1] + " | " + matriz[1][2] + " | " + matriz[1][3] + " |");
@@ -256,6 +259,7 @@ public class Main{
 					case 1:
 				if (("O".equals(matriz[3][1])) || ("X".equals(matriz[3][1]))) {
 					System.out.println("Quadrante repetido, perdeu a vez"); 
+					}else{
 					matriz[3][1]="O";
 					break;
 				}
